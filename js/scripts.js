@@ -36,17 +36,23 @@ Pizza.prototype.fullOrder = function() {
 // UI
 
 var myPizza = new Pizza(this.toppings, this.size, this.price);
+var yourOrder = new YourOrder();
 
 $(document).ready(function(){
   $('form#createPizza').submit(function(event) {
     event.preventDefault();
-    //var toppings = $("select#pizzaToppings").val();
-    //var size = $("select#pizzaSize").val();
-   // $("select#pizzaToppings").val();
-    //$("select#pizzaSize").val();
-    //console.log(size);
-    //console.log(toppings);
-
+   var inputtedSize = $("input#pizzaSize").val();
+   var inputtedTopping1 = $("input#topping1").val();
+   var inputtedTopping2 = $("input#topping2").val();
+   var inputtedTopping3 = $("input#topping3").val();
+   var newPizza = new Pizza (inputtedSize, inputtedTopping1, inputtedTopping2, inputtedTopping3);
+   yourOrder.addOrder(newPizza);
+   console.log(inputtedTopping1);
+   console.log(inputtedTopping2);
+   console.log(inputtedTopping3);
+   console.log(inputtedSize);
+   console.log(newPizza);
+   
 
   })
 });
