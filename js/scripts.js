@@ -1,9 +1,12 @@
 //Business logic for your order
 
 function YourOrder() {
-  this.order = [];
+  this.orders = [];
 }
 
+YourOrder.prototype.addOrder = function(order) {
+  this.orders.push(order);
+}
 
 // Business logic for Pizza
 

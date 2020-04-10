@@ -13,27 +13,34 @@
 
 <body>
   <h1>Welcome to PIZZA</h1>
+  <h2>Create your pizza:</h2>
   <div class="container">
-    <h2>Create your pizza:</h2>
     <form id="createPizza">
-      
-      <label for="pizzaSize">Select pizza size:
-      </label>
+
+      <h2>Pizza Size</h2>
       <select name = "pizzaSize" id="pizzaSize">
         <option value="small">Small</option>
         <option value="medium">Medium</option>
         <option value="large">Large</option>
       </select>
 
-      <label for="pizzaToppings">Select toppings:
-      </label>
-      <input type="checkbox" name="pizzaToppings" value="hair"> Hair
-      <input type="checkbox" name="pizzaToppings" value="teeth"> Teeth 
-      <input type="checkbox" name="pizzaToppings" value="dust"> Dust 
-      <input type="checkbox" name="pizzaToppings" value="dust"> Blood 
+      <h2>Pizza Toppings</h2>>
+      <label for="topping1">First topping:</label>
+      <input type="text" id="topping1">
+      <label for="topping2">Second topping:</label>
+      <input type="text" id="topping2">
+      <label for="topping3">Third topping:</label>
+      <input type="text" id="topping3">
 
       <button type="submit" class="btn">It is time</button>
     </form>
+
+    <div id="results">
+      <p>Pizza size: <span class="pSize"></span></p>
+      <p>Toppings: <span class="pToppings"></span></p>
+      <p>Price: <span class="pPrice"></span></p>
+      </div>
+
   </div>
 </body>
 </html>
