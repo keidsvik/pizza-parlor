@@ -1,7 +1,14 @@
+#image {
+  margin-left: 100px;
+  margin-top: 75px;
+}
+
 #results {
   display: none;
 }
 
-body {
-  margin-left: 250px;
+
+
+#createPizza {
+  margin-left: 100px;
 }

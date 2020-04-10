@@ -10,14 +10,24 @@ YourOrder.prototype.addOrder = function(order) {
 
 // Business logic for Pizza
 
-function Pizza (toppings, size, price) {
+function Pizza (toppings, size) {
   this.size = size;
   this.toppings = toppings;
-  this.price = price;
 }
 
-YourOrder.prototype.addOrder = function() {
-  return "Your order is a" + this.size + " pizza with" + this.toppings + ". It costs" + this.price; 
+Pizza.prototype.pizzaPrice = function() {
+  if (this.size === 'small') {
+    this.pizzaPrice += 10;
+  } else if(this.size === "medium") {
+    this.pizzaPrice += 13;
+  } else {
+    this.pizzaPrice +=16;
+  }
+  return this.pizzaPrice
+}
+
+//YourOrder.prototype.addOrder = function() {
+  //return "Your order is a" + this.size + " pizza with" + this.toppings + ". It costs" + this.price; 
 }
 
 //Pizza.prototype.pizzaPrice = function () {

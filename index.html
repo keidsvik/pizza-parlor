@@ -12,25 +12,35 @@
 </head>
 
 <body>
-  <h1>Welcome to PIZZA</h1>
+  <img id= "image" src="img/title.jpg" alt="logo">
   <h2>Create your pizza:</h2>
   <div class="container">
-    <form id="createPizza">
-
+    <div class="row">
+    <div class="col-md-6">
+      <hr>
       <h2>Pizza Toppings</h2>
-      <label for="topping1">First topping:</label>
+      <p>Pick three</p>
+    <form id="createPizza">
+      <label for="topping1"></label>
       <input type="text" id="topping1">
-      <label for="topping2">Second topping:</label>
+      <hr>
+      <label for="topping2"></label>
       <input type="text" id="topping2">
-      <label for="topping3">Third topping:</label>
+      <hr>
+      <label for="topping3"></label>
       <input type="text" id="topping3">
 
       <h2>Pizza Size</h2>
-      <label for="size">Small, medium, or large:</label>
-      <input type="text" id="pizzaSize">
-
+      <select name="size" id="size">
+        <option value="small">Small</option>
+        <option value="medium">Medium</option>
+        <option value="large">Large</option>
+      </select>
+      <hr>
       <button type="submit" class="btn">It is time</button>
     </form>
+    <div class="col-md-6">  
+  </div>
 
     <div id="results">
       ""
