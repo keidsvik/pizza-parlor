@@ -52,17 +52,17 @@ $(document).ready(function(){
    var topping1 = $("input#topping1").val();
    var topping2 = $("input#topping2").val();
    var topping3 = $("input#topping3").val();
-   $("select#pizzaSize").val("");
-   $("input#topping1").val("");
-   $("input#topping2").val("");
-   $("input#topping3").val("");
+   $("select#pizzaSize").val();
+   $("input#topping1").val();
+   $("input#topping2").val();
+   $("input#topping3").val();
    var newPizza = new Pizza(size, topping1, topping2, topping3);
     newPizza.pizzaPrice();
     $("div#results").text("size:" + this.size + "toppings:" + this.toppings);
-
-    document.getElementById('results');
-
+    console.log(size);
+    console.log(topping2);
     console.log(topping3);
+    console.log(topping1);
 
    
    
