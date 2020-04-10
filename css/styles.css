@@ -1,14 +1,21 @@
 #image {
-  margin-left: 100px;
+  margin-left: 25px;
   margin-top: 75px;
+}
+
+#image2 {
+  margin-left: 25px;
 }
 
 #results {
   display: none;
 }
 
+body {
+  background-color:#34d0f7;
+}
 
 .container {
-  margin-left: 100px;
+  margin-left: 500px;
   font-family: 'Press Start 2P', cursive;
-}
+  color: #F7347A;
