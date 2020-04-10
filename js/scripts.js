@@ -1,4 +1,11 @@
-//Business logic
+//Business logic for your order
+
+function YourOrder() {
+  this.order = [];
+}
+
+
+// Business logic for Pizza
 
 function Pizza (toppings, size, price) {
   this.toppings = toppings;
