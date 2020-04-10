@@ -14,9 +14,21 @@
 <body>
   <div class="container">
     <form id="createPizza">
+      <label for="pizzaSize">Select pizza size:
+      </label>
+      <select name = "pizzaSize" id="pizzaSize">
+        <option value="small">Small</option>
+        <option value="medium">Medium</option>
+        <option value="large">Large</option>
+      </select>
+      <label for="pizzaToppings">Select toppings:
+      </label>
+      <input type="checkbox" name="pizzaToppings" value="hair"> Hair
+      <input type="checkbox" name="pizzaToppings" value="teeth"> Teeth 
+      <input type="checkbox" name="pizzaToppings" value="dust"> Dust 
+      <input type="checkbox" name="pizzaToppings" value="dust"> Blood 
 
-
-      
+      <button type="submit" class="btn btn-danger">It is time</button>
     </form>
   </div>
 </body>
