@@ -11,12 +11,12 @@ YourOrder.prototype.addOrder = function(order) {
 // Business logic for Pizza
 
 function Pizza (toppings, size, price) {
-  this.toppings = toppings;
   this.size = size;
+  this.toppings = toppings;
   this.price = price;
 }
 
-Pizza.prototype.fullOrder = function() {
+YourOrder.prototype.addOrder = function() {
   return "Your order is a" + this.size + " pizza with" + this.toppings + ". It costs" + this.price; 
 }
 
@@ -35,8 +35,17 @@ Pizza.prototype.fullOrder = function() {
 
 // UI
 
-var myPizza = new Pizza(this.toppings, this.size, this.price);
-var yourOrder = new YourOrder();
+var myPizza = new Pizza(this.size, this.toppings, this.price);
+var yourOrder = new YourOrder(this.size, this.toppings, this.price);
+
+//function displayNewPizza(myPizzaToDisplay) {
+  //var orders = myPizza;
+  //var fullOrder = " ";
+  //myPizzaToDisplay.orders.forEach(function(order) {
+   //fullOrder += orders.toppings + orders.size + orders.price;
+  //})
+  //orders.html(myPizzaToDisplay);
+//}
 
 $(document).ready(function(){
   $('form#createPizza').submit(function(event) {
@@ -45,13 +54,16 @@ $(document).ready(function(){
    var inputtedTopping1 = $("input#topping1").val();
    var inputtedTopping2 = $("input#topping2").val();
    var inputtedTopping3 = $("input#topping3").val();
-   var newPizza = new Pizza (inputtedSize, inputtedTopping1, inputtedTopping2, inputtedTopping3);
-   yourOrder.addOrder(newPizza);
-   console.log(inputtedTopping1);
-   console.log(inputtedTopping2);
-   console.log(inputtedTopping3);
-   console.log(inputtedSize);
+   $("input#pizzaSize").val("");
+   $("input#topping1").val("");
+   $("input#topping2").val("");
+   $("input#topping3").val("");
+   var newPizza = new Pizza (inputtedSize, inputtedTopping1, inputtedTopping2, inputtedTopping3, this.price);
    console.log(newPizza);
+
+   $("div#results").text("size:" + inputtedSize + "toppings:" + inputtedTopping1 + inputtedTopping2 + inputtedTopping3);
+
+   
    
 
   })
